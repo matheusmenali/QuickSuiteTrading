@@ -2,26 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
-## Development server
+# Project Name
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular 16 Project - Quick Suit Trading
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ensure that you have Node.js and npm installed on your machine.
 
-## Build
+- Node.js: [Download Node.js](https://nodejs.org/)
+- npm: This is typically installed automatically with Node.js
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+1. Clone the repository: `git clone https://github.com/matheusmenali/QuickSuiteTrading.git` on the branch master.
+2. Navigate to the project directory: `QuickSuiteTrading`
+3. Install dependencies: `npm install`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
+1. Start the application: `ng serve`
+2. Open your browser and go to [http://localhost:4200/](http://localhost:4200/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contact
 
-## Further help
+If you have questions or suggestions, feel free to reach out:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Matheus Menali Rodrigues Pereira  
+- matheusmenali@yahoo.com.br
