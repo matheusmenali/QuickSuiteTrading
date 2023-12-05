@@ -1,0 +1,50 @@
+<body>
+  <div class="content row">
+    <div class="col-5 image">
+      <img [src]="getImagePath(movie.title)" width="400" height="600" />
+    </div>
+    <div class="col-7 description">
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckChecked"
+          [checked]="isInWatchList"
+          (change)="toggleBtnWatchList($event)"
+        />
+        <label
+          class="form-check-label"
+          for="flexSwitchCheckChecked"
+          *ngIf="!isInWatchList"
+          >Add to Watchlist</label
+        >
+        <label
+          class="form-check-label"
+          for="flexSwitchCheckChecked"
+          *ngIf="isInWatchList"
+          >Remove from Watchlist</label
+        >
+      </div>
+
+      <h2>Title: {{ movie.title }}</h2>
+      <p>Duration: {{ movie.duration }}</p>
+      <p>Genre: {{ movie.genre }}</p>
+      <p>Rating: {{ movie.rating }}</p>
+      <p>Release date: {{ movie.releaseDate }}</p>
+      <p>Description: {{ movie.description }}</p>
+      <div class="frame">
+        <div class="ratio ratio-4x3">
+          <iframe
+            width="400"
+            height="400"
+            [src]="getTrailerSafeUrl(movie.trailerLink)"
+            title="YouTube video"
+          ></iframe>
+        </div>
+      </div>
+      <button (click)="backToDash()" class="btn btn-primary btnBack">
+        Back
+      </button>
+    </div>
+  </div>
+</body>

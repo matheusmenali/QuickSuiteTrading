@@ -1,0 +1,41 @@
+<header>
+  <h1>Quick Suit Training Films</h1>
+</header>
+
+<body>
+  <div class="movie">
+    <span> Sort by: </span>
+    <button class="btn btn-primary" (click)="sortBy('title')">Title</button>
+    <button class="btn btn-primary" (click)="sortBy('release')">
+      Release date
+    </button>
+  </div>
+
+  <div class="movie" *ngFor="let movie of moviesList; let i = index">
+    <div class="thumbnail">
+      <div class="onWatchList tooltip-own" *ngIf="movie.isOnWatchList">
+        <i class="fa-solid fa-list-check"></i>
+        <span class="tooltip-text">On my watchlist</span>
+      </div>
+      <img
+        [src]="getThumbnailUrl(movie.trailerLink)"
+        width="170"
+        (click)="redirect(i)"
+      />
+    </div>
+    <div class="description-content">
+      <div class="description">
+        <h2>Title: {{ movie.title }}</h2>
+        <p>Duration: {{ movie.duration }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+      </div>
+      <div class="watchBtn">
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-list" (click)="addWatchList(movie.title, i)">
+            Add to Watchlist</i
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

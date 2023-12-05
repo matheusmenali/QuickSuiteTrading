@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.movie {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.description-content {
+  margin-left: 15px;
+  display: flex;
+  width: 100%;
+  .description {
+    width: 100%;
+  }
+  .watchBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+}
+
+.thumbnail {
+  position: relative;
+
+  img {
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .onWatchList {
+    position: absolute;
+    top: -20px;
+    left: -17px;
+  }
+}
+
+.tooltip-own {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-own .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 15px;
+}
+
+/* Exibe a tooltip quando o mouse passa sobre o elemento */
+.tooltip-own:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-primary {
+  margin-left: 10px;
+}
